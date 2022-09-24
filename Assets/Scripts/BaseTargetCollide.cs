@@ -44,7 +44,16 @@ public class BaseTargetCollide : MonoBehaviour
         dir = dir.normalized * speed;
 
         // Updates Velocity Accordingly
-        body.velocity = dir;        
+        body.velocity = dir;
+
+        // Update Missile Rotation
+        //transform.eulerAngles = (new Vector3(dir.x, dir.y));
+        transform.rotation = Quaternion.LookRotation(new Vector3(dir.x, dir.y)) * Quaternion.FromToRotation(Vector3.right, Vector3.forward);
+    }
+
+    void LateUpdate()
+    {
+        transform.Rotate(Vector3.forward, 90);
     }
 
     // Destroys missile on collision and damages target
