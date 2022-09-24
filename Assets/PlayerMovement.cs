@@ -24,11 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Changes "To Be" Speed of Object based on what Keys are Pressed
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            Debug.Log("Reading Input");
             sx += 1;
-        }
-            
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             sx -= 1;
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
@@ -36,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
             sy -= 1;
 
-        Debug.Log("sx: " + sx);
 
         // Updates Player's Physics Body Velocity
         Vector2 v1 = new Vector2(sx, sy).normalized;
