@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class BaseTargetCollide : MonoBehaviour
 {
-    [SerializeField] private GameObject[] bases;
     [SerializeField] float speed;
     [SerializeField] public float dmg;
 
 
-    private GameObject target;
+    public GameObject target;
     private Vector2 targetPoint;
     private Rigidbody2D body;
 
     void Start()
     {
+
         // Define Instance Variables
-        target = bases[Random.Range(0, bases.Length)];
         Debug.Log(target == null);
         body = this.GetComponent<Rigidbody2D>();
 
@@ -65,6 +64,11 @@ public class BaseTargetCollide : MonoBehaviour
         {
             DamageCommand dmgC = new DamageCommand(target, dmg);
             dmgC.Execute();
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
             Destroy(this.gameObject);
         }
     }

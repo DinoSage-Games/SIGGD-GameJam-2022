@@ -648,7 +648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adba0e98785d8f439f0684366e20bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missileTemplate: {fileID: 0}
+  missileTemplate: {fileID: 1801917907580793837, guid: 03da8d45c6054f54695fd53b2a0be746, type: 3}
+  delay: 3
 --- !u!4 &1773374505
 Transform:
   m_ObjectHideFlags: 0
