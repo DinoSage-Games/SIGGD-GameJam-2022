@@ -54,9 +54,9 @@ public class BaseTargetCollide : MonoBehaviour
         //Check for a match with the a base with the "Base" tag
         if (collision.gameObject.tag == "Base")
         {
-            DamageCommand dmgC = new DamageCommand(gameObject, dmg);
+            DamageCommand dmgC = new DamageCommand(target, dmg);
             dmgC.Execute();
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

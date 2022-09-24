@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageCommand : MonoBehaviour, Command
+public class DamageCommand : Command
 {
     private GameObject target;
     private float dmg;
