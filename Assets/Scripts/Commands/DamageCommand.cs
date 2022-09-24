@@ -5,15 +5,15 @@ using UnityEngine;
 public class DamageCommand : MonoBehaviour, Command
 {
     private GameObject target;
-    private GameObject missile;
-    public DamageCommand(GameObject target, GameObject missile)
+    private float dmg;
+    public DamageCommand(GameObject target, float dmg)
     {
         this.target = target;
-        this.missile = missile;
+        this.dmg = dmg;
     }
 
     public void Execute()
     {
-        target.GetComponent<Health>().Hurt(missile.GetComponent<BaseTargetCollide>().dmg);
+        target.GetComponent<Health>().Hurt(dmg);
     }
 }
