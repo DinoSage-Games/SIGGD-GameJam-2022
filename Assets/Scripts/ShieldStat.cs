@@ -4,36 +4,21 @@ using UnityEngine;
 
 public class ShieldStat : MonoBehaviour
 {
-    [SerializeField] int shields;
-
-    public void Hurt(int amount)
-    {
-        shields -= amount;
-    }
-
-    public float getShields()
-    {
-        return shields;
-    }
-
     public int playerShield = 2;
-    public ShieldManager shieldManager;
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject HUD;
+
 
     // Start is called before the first frame update
     void Awake()
     {
-        shieldManager = player.GetComponent<ShieldManager>();
+
     }
 
     private void Start()
     {
         updateShieldUI();
     }
-    /*public void startingShield(int startShield)
-    {
-        playerShield = startShield;
-    }*/
+
     public void decreaseShield()
     {
         playerShield--;
@@ -46,6 +31,6 @@ public class ShieldStat : MonoBehaviour
 
     public void updateShieldUI()
     {
-        shieldManager.updateShield(playerShield);
+        HUD.GetComponent<ShieldManager>().updateShield(playerShield);
     }
 }

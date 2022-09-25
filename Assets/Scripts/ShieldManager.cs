@@ -5,18 +5,20 @@ using UnityEngine.UI;
 
 public class ShieldManager : MonoBehaviour
 {
-
     public GameObject Image0;
     public GameObject Image1;
     public GameObject Image2;
     public GameObject Image3;
 
-
-
-
+    private bool hasShield = true;
     public void updateShield(int shields)
     {
-        Image0.gameObject.SetActive(false);
+        if (hasShield)
+        {
+            Image0.gameObject.SetActive(false);
+        }
+        else
+            Image0.gameObject.SetActive(true);
         Image1.gameObject.SetActive(false);
         Image2.gameObject.SetActive(false);
         Image3.gameObject.SetActive(false);
@@ -36,24 +38,14 @@ public class ShieldManager : MonoBehaviour
                 Image1.gameObject.SetActive(true);
                 break;
             case 0:
-                Debug.Log("Shield 0");
-                Image0.gameObject.SetActive(true);
+                hasShield = false;
                 break;
             default:
-                Debug.Log("Shield Error");
                 break;
-
         }
-    }
-
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        if (!hasShield)
+        {
+            Image0.gameObject.SetActive(true);
+        }
     }
 }

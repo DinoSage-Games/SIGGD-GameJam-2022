@@ -18,5 +18,8 @@ public class DamageCommand : Command
         target.GetComponent<HealthStat>().Hurt(dmg);
     }
 
-
+    public void damageShield()
+    {
+        target.GetComponent<ShieldStat>().decreaseShield();
+    }
 }

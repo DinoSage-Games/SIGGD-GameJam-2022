@@ -78,8 +78,8 @@ public class BaseTargetCollide : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             shieldStat = GameObject.Find("Heli");
-            ShieldCommand shieldC = new ShieldCommand(shieldStat);
-            shieldC.Execute();
+            ShieldCommand dmgC = new ShieldCommand(shieldStat);
+            dmgC.Execute();
             Destroy(this.gameObject);
 
         }
