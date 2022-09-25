@@ -5,13 +5,11 @@ using UnityEngine;
 public class WavePoint : MonoBehaviour
 {
     Missile[] missiles;
-    GameObject[] bases;
 
-    public void Set(GameObject[] bases, params Missile[] missiles)
+    public void Set(params Missile[] missiles)
     {
         // Initialize Instance Variables
         this.missiles = missiles;
-        this.bases = bases;
     }
 
     void Start()
@@ -19,7 +17,7 @@ public class WavePoint : MonoBehaviour
         foreach (Missile m in missiles)
         {
             m.Load();
-            StartCoroutine(m.SpawnMissile(bases[Random.Range(0, bases.Length)]));
+            StartCoroutine(m.SpawnMissile());
         }
     }
 

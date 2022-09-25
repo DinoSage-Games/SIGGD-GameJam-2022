@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicMissile : Missile
 {
+    GameObject[] bases;
     public override void Set(int count, float damage, float delay, float speed) {
 
     }
@@ -14,15 +15,18 @@ public class BasicMissile : Missile
     {
         missileType = (GameObject) Resources.Load("Prefabs/Missile");
         missileType.GetComponent<BaseTargetCollide>().dmg = Damage;
+        bases = GameObject.FindGameObjectsWithTag("Base");
     }
 
-    public override IEnumerator SpawnMissile(GameObject target)
+    public override IEnumerator SpawnMissile()
     {
+        GameObject target;
         for (int i = 0; i < Count ; i++)
         {
             // Wait for "Delay" seconds before each spawn
             yield return new WaitForSeconds(Mathf.Max(delay, 1));
 
+            target = bases[Random.Range(0, bases.Length)];
             // Instantiate missile
             GameObject missile = Instantiate(missileType);
 

@@ -5,31 +5,26 @@ using UnityEngine;
 
 public class WaveSystem : MonoBehaviour
 {
-    List<WavePoint> wavepoints;
     int currIndex = 0;
-    [SerializeField] GameObject wave;
+    [SerializeField] GameObject[] waves;
     GameObject[] bases;
-    Transform parent;
 
     // Start is called before the first frame update
     void Start()
     {
-        parent = this.transform.parent;
 
         // Define Bases
         bases = GameObject.FindGameObjectsWithTag("Base");
 
-        wavepoints = new List<WavePoint>();
+        Debug.Log("Bases size: " + bases.Length);
 
         // First Wave
-        GameObject w1 = Instantiate();
+        GameObject w1 = Instantiate(waves[currIndex]);
         WavePoint w1_wp = w1.GetComponent<WavePoint>();
-        w1_wp.Set()
+        w1_wp.Set(w1.GetComponent<BasicMissile>());
         
-        //wavepoints.Add(Instantiate(bases, parent.transform)); new BasicMissile(10, 10, 3, 1)));
 
         // Set First Wave
-        Instantiate(wavepoints[currIndex], this.transform.parent);
         Debug.Log("RUN");
     }
 

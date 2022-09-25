@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8964204560045390200
+--- !u!1 &6042105920965335595
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8964204560045390202}
-  - component: {fileID: 8964204560045390203}
+  - component: {fileID: 6042105920965335593}
+  - component: {fileID: 6042105920965335592}
+  - component: {fileID: 6042105920965335599}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -17,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8964204560045390202
+--- !u!4 &6042105920965335593
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8964204560045390200}
+  m_GameObject: {fileID: 6042105920965335595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.87320966, y: -1.8173451, z: -0.020916848}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,15 +33,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8964204560045390203
+--- !u!114 &6042105920965335592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8964204560045390200}
+  m_GameObject: {fileID: 6042105920965335595}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f14473d4fb44be4478dfd1b351cd43b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6042105920965335599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6042105920965335595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0b6ccea3d2635458dac8d03f81a119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missileType: {fileID: 1801917907580793837, guid: 03da8d45c6054f54695fd53b2a0be746, type: 3}
+  Count: 10
+  Damage: 10
+  Speed: 1
