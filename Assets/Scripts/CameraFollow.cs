@@ -17,6 +17,20 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         Vector3 playerpos = player.transform.position;
-        this.transform.position = new Vector3(playerpos.x, Mathf.Max(playerpos.y, 0), this.transform.position.z);        
+        float posX = 0;
+        if(playerpos.x < 0)
+        {
+            posX = Mathf.Max(playerpos.x, -21);
+        } else if (playerpos.x > 0)
+        {
+            posX = Mathf.Min(playerpos.x, 21);
+        } else
+        {
+            posX = playerpos.x;
+        }
+
+        //float posX
+        float posY = Mathf.Min(Mathf.Max(playerpos.y, 4), 9);
+        this.transform.position = new Vector3(posX, posY, this.transform.position.z);
     }
 }

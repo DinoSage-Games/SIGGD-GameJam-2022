@@ -58,6 +58,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missileType: {fileID: 1801917907580793837, guid: 03da8d45c6054f54695fd53b2a0be746, type: 3}
-  Count: 10
+  Count: 20
   Damage: 10
-  Speed: 1
+  Speed: 3
