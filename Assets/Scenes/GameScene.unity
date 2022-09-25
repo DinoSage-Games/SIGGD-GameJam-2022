@@ -504,6 +504,7 @@ GameObject:
   - component: {fileID: 1643564407}
   - component: {fileID: 1643564406}
   - component: {fileID: 1643564405}
+  - component: {fileID: 1643564408}
   m_Layer: 0
   m_Name: Heli
   m_TagString: Player
@@ -639,6 +640,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 10
   speedY: 5
+--- !u!114 &1643564408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643564402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6029a20f25cac404fbe2a29cf1fc6583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shields: 0
 --- !u!1 &1773374503
 GameObject:
   m_ObjectHideFlags: 0
