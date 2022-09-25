@@ -12,8 +12,14 @@ public class DamageCommand : Command
         this.dmg = dmg;
     }
 
+
     public void Execute()
     {
         target.GetComponent<HealthStat>().Hurt(dmg);
+    }
+
+    public void damageShield()
+    {
+        target.GetComponent<ShieldStat>().decreaseShield();
     }
 }
