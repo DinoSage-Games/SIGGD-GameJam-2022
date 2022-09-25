@@ -148,4 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   dmg: 10
+  baseGroup: {fileID: 0}
   target: {fileID: 0}
