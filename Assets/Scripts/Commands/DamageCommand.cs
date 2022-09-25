@@ -14,6 +14,6 @@ public class DamageCommand : Command
 
     public void Execute()
     {
-        target.GetComponent<Health>().Hurt(dmg);
+        target.GetComponent<HealthStat>().Hurt(dmg);
     }
 }

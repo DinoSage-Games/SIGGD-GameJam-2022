@@ -30,7 +30,7 @@ public class MissileSpawn : MonoBehaviour
 
             missile.transform.position = new Vector3(posX, 7, 0);
 
-            Debug.Log("Missle Count: " + missileCount);
+            //Debug.Log("Missle Count: " + missileCount);
             missileCount++;
         }
     }

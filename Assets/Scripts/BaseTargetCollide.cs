@@ -1,12 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BaseTargetCollide : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] public float dmg;
-
+    [SerializeField] GameObject baseGroup;
 
     public GameObject target;
     private Vector2 targetPoint;
@@ -62,8 +64,12 @@ public class BaseTargetCollide : MonoBehaviour
         //Check for a match with the a base with the "Base" tag
         if (collision.gameObject.tag == "Base")
         {
-            DamageCommand dmgC = new DamageCommand(target, dmg);
+            DamageCommand dmgC = new DamageCommand(target.transform.parent.gameObject, dmg);
             dmgC.Execute();
+
+            // Print Health Value
+            HealthStat health = target.transform.parent.gameObject.GetComponent<HealthStat>();
+            Debug.Log("Health: " + health.getHealth());
             Destroy(this.gameObject);
         }
 
