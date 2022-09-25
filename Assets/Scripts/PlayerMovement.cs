@@ -36,5 +36,14 @@ public class PlayerMovement : MonoBehaviour
         // Updates Player's Physics Body Velocity
         Vector2 v1 = new Vector2(sx, sy).normalized;
         body.velocity = new Vector2(v1.x*speedX, v1.y*speedY);
+
+        // Switches Image Orientation Accordingly
+        if (sx > 0)
+        {
+            this.GetComponent<SpriteRenderer>().flipX = false;
+        } else
+        {
+            this.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 }

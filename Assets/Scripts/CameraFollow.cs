@@ -17,6 +17,7 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         Vector3 playerpos = player.transform.position;
-        this.transform.position = new Vector3(playerpos.x, Mathf.Max(playerpos.y, 0), this.transform.position.z);        
+        this.transform.position = new Vector3(playerpos.x, Mathf.Max(playerpos.y, 0), this.transform.position.z);
+        Debug.Log("Player y: " + playerpos.y);
     }
 }
