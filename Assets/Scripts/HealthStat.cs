@@ -5,6 +5,8 @@ using UnityEngine;
 public class HealthStat : MonoBehaviour
 {
     [SerializeField] float health;
+    [SerializeField] float maxHealth;
+
 
     public void Hurt(float amount)
     {
@@ -15,4 +17,14 @@ public class HealthStat : MonoBehaviour
     {
         return health;
     }
+
+    public void setMaxHealth(float maxHealthInput)
+    {
+        maxHealth = maxHealthInput;
+    }
+    public float getMaxHealth()
+    {
+        return maxHealth;
+    }
+
 }

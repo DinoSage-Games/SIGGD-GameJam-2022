@@ -2,21 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageCommand : Command
+public class ShieldCommand : Command
 {
     private GameObject target;
-    private float dmg;
-    public DamageCommand(GameObject target, float dmg)
+
+    public ShieldCommand(GameObject target)
     {
         this.target = target;
-        this.dmg = dmg;
     }
-
-
     public void Execute()
     {
-        target.GetComponent<HealthStat>().Hurt(dmg);
+        Debug.Log(target);
+        target.GetComponent<ShieldStat>().decreaseShield();
     }
-
 
 }

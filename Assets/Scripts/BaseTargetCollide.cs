@@ -9,8 +9,10 @@ public class BaseTargetCollide : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] public float dmg;
     [SerializeField] GameObject baseGroup;
+    GameObject shieldStat;
 
     public GameObject target;
+
     private Vector2 targetPoint;
     private Rigidbody2D body;
 
@@ -75,7 +77,11 @@ public class BaseTargetCollide : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            shieldStat = GameObject.Find("Heli");
+            ShieldCommand shieldC = new ShieldCommand(shieldStat);
+            shieldC.Execute();
             Destroy(this.gameObject);
+
         }
     }
 }
