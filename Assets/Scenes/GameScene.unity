@@ -649,8 +649,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1773374505}
   - component: {fileID: 1773374504}
+  - component: {fileID: 1773374506}
   m_Layer: 0
-  m_Name: MissileCommand
+  m_Name: Command
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,7 +664,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773374503}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4adba0e98785d8f439f0684366e20bd7, type: 3}
   m_Name: 
@@ -685,6 +686,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1773374506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773374503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c849807f5517447b9ad2c90dec6e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave: {fileID: 8964204560045390200, guid: b5f6a50628da61340af4580b11d03b2b, type: 3}
 --- !u!1 &1802695573
 GameObject:
   m_ObjectHideFlags: 0

@@ -60,7 +60,6 @@ public class BaseTargetCollide : MonoBehaviour
     // Destroys missile on collision and damages target
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("COLLIDE!");
         //Check for a match with the a base with the "Base" tag
         if (collision.gameObject.tag == "Base")
         {
@@ -69,7 +68,7 @@ public class BaseTargetCollide : MonoBehaviour
 
             // Print Health Value
             HealthStat health = target.transform.parent.gameObject.GetComponent<HealthStat>();
-            Debug.Log("Health: " + health.getHealth());
+            //Debug.Log("Health: " + health.getHealth());
             Destroy(this.gameObject);
         }
 
