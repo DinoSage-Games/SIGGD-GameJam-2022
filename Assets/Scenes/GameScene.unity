@@ -2251,6 +2251,7 @@ GameObject:
   - component: {fileID: 2259602770670029046}
   - component: {fileID: 2259602770670029044}
   - component: {fileID: 2259602770670029049}
+  - component: {fileID: 2259602770670029050}
   m_Layer: 0
   m_Name: Heli
   m_TagString: Player
@@ -2420,3 +2421,17 @@ PolygonCollider2D:
       - {x: 0.35, y: -0.61}
       - {x: 0.34, y: -0.62}
       - {x: 0.17999999, y: -0.62}
+--- !u!114 &2259602770670029050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2259602770670029043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6029a20f25cac404fbe2a29cf1fc6583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerShield: 3
+  HUD: {fileID: 2113673419}
