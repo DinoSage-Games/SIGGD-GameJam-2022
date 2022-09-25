@@ -31,10 +31,10 @@ public class BasicMissile : Missile
             GameObject missile = Instantiate(missileType);
 
             // Set Missile Position & Target
-            float posX = Random.Range(-9, 9);
+            float posX = Random.Range(-34, 34);
 
             missile.GetComponent<BaseTargetCollide>().target = target;
-            missile.transform.position = new Vector3(posX, 7, 0);
+            missile.transform.position = new Vector3(posX, 25, 0);
         }
         // Dispose of this script
         Destroy(this);
