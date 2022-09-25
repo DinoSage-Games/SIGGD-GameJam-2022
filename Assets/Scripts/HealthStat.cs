@@ -7,7 +7,11 @@ public class HealthStat : MonoBehaviour
     [SerializeField] float health;
     [SerializeField] float maxHealth;
 
-
+    public void Start()
+    {
+        //Max health equals starting health
+        maxHealth = health;
+    }
     public void Hurt(float amount)
     {
         health -= amount;
