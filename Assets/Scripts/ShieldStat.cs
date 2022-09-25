@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class ShieldStat : MonoBehaviour
 {
-    public int playerShield = 2;
+    public int playerShield = 3;
     [SerializeField] GameObject HUD;
-
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-
-    }
+    SFXnMusic playerHit;
 
     private void Start()
     {
+        playerHit = FindObjectOfType<SFXnMusic>();
         updateShieldUI();
+
     }
 
     public void decreaseShield()
     {
         playerShield--;
+        playerHit.playBaseHit();
     }
 
     public int getPlayerShield()

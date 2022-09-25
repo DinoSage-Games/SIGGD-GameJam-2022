@@ -6,15 +6,18 @@ public class HealthStat : MonoBehaviour
 {
     [SerializeField] float health;
     [SerializeField] float maxHealth;
+    SFXnMusic baseHit;
 
     public void Start()
     {
+        baseHit = FindObjectOfType<SFXnMusic>();
         //Max health equals starting health
         maxHealth = health;
     }
     public void Hurt(float amount)
     {
         health -= amount;
+        baseHit.playBaseHit();
     }
 
     public float getHealth()
