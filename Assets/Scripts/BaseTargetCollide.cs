@@ -76,11 +76,12 @@ public class BaseTargetCollide : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            shieldStat = GameObject.Find("Heli");
-            ShieldCommand dmgC = new ShieldCommand(shieldStat);
-            dmgC.Execute();
-            Destroy(this.gameObject);
+            //shieldStat = GameObject.Find("Heli");
+            //ShieldCommand dmgC = new ShieldCommand(collision.gameObject);
 
+            //dmgC.Execute();
+            Destroy(this.gameObject);
+            //Debug.Log("Player Collision");
         }
     }
 }
